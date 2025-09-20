@@ -6,7 +6,7 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
             </svg>
         </div>
-        <span class="text-lg font-bold tracking-tight">Admin Klinik</span>
+            <span class="text-xl font-bold tracking-tight"><a href="{{ route('dashboard') }}">Admin Klinik</a></span>
     </div>
     <!-- Navigation -->
     <nav class="flex-1 px-6 py-4">

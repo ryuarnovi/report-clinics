@@ -1,4 +1,4 @@
-@props(['messages'])
+@props(['messages' => null])
 
 @if ($messages)
     @foreach ((array) $messages as $message)

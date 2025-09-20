@@ -5,7 +5,7 @@
             <svg class="h-8 w-8 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
             </svg>
-            <span class="text-xl font-bold tracking-tight">Admin Klinik</span>
+            <span class="text-xl font-bold tracking-tight"><a href="{{ route('dasboard') }}">Admin Klinik</a></span>
         </div>
         <nav class="flex-1 px-6 py-4">
             <ul class="space-y-2">
