@@ -25,18 +25,21 @@ new #[Layout('layouts.guest')] class extends Component
 
         // Redirect sesuai role
         if ($role === 'admin') {
-            $this->redirectIntended(default: route('admin.obat-input', absolute: false), navigate: true);
+            $this->redirectIntended(default: route('dashboard', absolute: false), navigate: true);
         } elseif ($role === 'dokter') {
-            $this->redirectIntended(default: route('dokter.rekap-obat', absolute: false), navigate: true);
+            $this->redirectIntended(default: route('dashboard', absolute: false), navigate: true);
         } else {
             $this->redirectIntended(default: route('dashboard', absolute: false), navigate: true);
         }
     }
 };
 ?>
-
 <div class="min-h-screen flex flex-col justify-center items-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 px-4">
     <div class="w-full max-w-md bg-white rounded-lg shadow-lg p-8">
+        
+        <!-- Logo/Title PUKESMAS -->
+        <h1 class="text-3xl font-extrabold text-center text-indigo-700 mb-8 tracking-wide">PUKESMAS</h1>
+        
         <!-- Session Status -->
         <x-auth-session-status class="mb-4" :status="session('status')" />
 

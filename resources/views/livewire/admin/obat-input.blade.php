@@ -8,7 +8,19 @@
             <input type="number" wire:model="harga_beli" class="filament-forms-input px-4 py-3 border border-gray-200 rounded-lg focus:ring-primary-500 focus:border-primary-500 w-full" placeholder="Harga Beli">
             <input type="number" wire:model="harga_jual" class="filament-forms-input px-4 py-3 border border-gray-200 rounded-lg focus:ring-primary-500 focus:border-primary-500 w-full" placeholder="Harga Jual">
             <input type="text" wire:model="no_batch" class="filament-forms-input px-4 py-3 border border-gray-200 rounded-lg focus:ring-primary-500 focus:border-primary-500 w-full" placeholder="No Batch">
-            <input type="date" wire:model="exp_date" class="filament-forms-input px-4 py-3 border border-gray-200 rounded-lg focus:ring-primary-500 focus:border-primary-500 w-full" placeholder="Tanggal Exp">
+            
+            {{-- Tampilkan tanggal expired di atas input date --}}
+            <div class="flex flex-col">
+                <span class="text-sm text-gray-700 mb-1">
+                    Tanggal Expired: 
+                    <span class="font-semibold text-primary-600">
+                        {{ $exp_date ? \Carbon\Carbon::parse($exp_date)->format('d-m-Y') : '-' }}
+                    </span>
+                </span>
+                <label for="exp_date" class="sr-only">Tanggal Exp</label>
+                <input type="date" wire:model="exp_date" class="filament-forms-input px-4 py-3 border border-gray-200 rounded-lg focus:ring-primary-500 focus:border-primary-500 w-full" placeholder="Tanggal Exp">
+            </div>
+            
             <input type="number" wire:model="stok_awal" class="filament-forms-input px-4 py-3 border border-gray-200 rounded-lg focus:ring-primary-500 focus:border-primary-500 w-full" placeholder="Stok Awal">
         </div>
 
