@@ -11,6 +11,7 @@
         </header>
 
         <main>
+            <livewire:components.expiry-alert />
             <div class="grid gap-6 md:grid-cols-2">
                 <a href="{{ route('dokter.rekap-obat') }}"
                    class="flex flex-col gap-2 bg-green-50 hover:bg-green-100 p-6 rounded-lg shadow ring-1 ring-green-100 transition border border-green-200">
@@ -25,20 +26,7 @@
                     <p class="text-gray-600 text-sm">Lihat laporan rekapitulasi obat: stok awal, masuk, keluar, sisa, dan laba per obat.</p>
                 </a>
 
-                <a href="{{ route('admin.rekap-obat') }}"
-                   class="flex flex-col gap-2 bg-blue-50 hover:bg-blue-100 p-6 rounded-lg shadow ring-1 ring-blue-100 transition border border-blue-200">
-                    <div class="flex items-center gap-2">
-                        <span class="inline-block bg-blue-600/10 text-blue-600 p-2 rounded-full">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <rect x="3" y="4" width="18" height="16" rx="2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M3 10h18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </span>
-                        <span class="text-lg font-semibold text-blue-700">Inventory Obat</span>
-                    </div>
-                    <p class="text-gray-600 text-sm">Kelola data stok obat, update jumlah, tambah stok baru, dan monitoring inventory.</p>
-                </a>
-            </div>
+                <livewire:components.inventory-obat />
 
             <div class="mt-10">
                 <div class="bg-gray-50 border border-gray-200 rounded-lg p-6">
